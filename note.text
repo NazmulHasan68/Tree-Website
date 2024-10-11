@@ -1,0 +1,66 @@
+-/test -> health check (D)
+-/seed -> seeding some data (D)
+
+====/api/users(D)
+- POST /resgister -> create the user account (D)
+- POST / actuvate -> activate the user account (D)
+- GET / profile -> get the user account (D)
+- DELETE / : id -> delete the user account (D)
+- PUT/: id -> update the user account (D)
+- PUT/ update-password/:id(D) -> update the password
+- POST/ forget-passoword (D) -> forget password
+- PUT /reset-passoword (D) -> reset password
+- PUT -Admin /ban/:id (D) -> ban the user
+- PUT -Admin / unban/:id (D) ->unban the user
+- GET -Admin /export-users (D) -> export all the user
+- GET -admin -/all users -> get all users including search  and pagination(D)
+
+
+- api/auth (JWT Auth)
+- POST /login -> isloggedOut ->userLogin (D)
+- POST /logout -> isloggedOut -> user logout(D)
+- GET /refresh -> get refresh token (D)
+
+Middleware
+ 
+ - isLoggedIn - (D)
+ - isloggedOut -(D)
+ - isAdmin - (D)
+ - uploadFIle - (D)
+ - getRefreshToken - (D)
+ - userValidation - (D)
+ - runValidation -(D)
+
+
+ -api/categories (CRUD)
+
+ - POST/ -> Create the product (admin)
+ - GET / -> get all the products
+ - GET /:id -> get single product
+ - POST /-> create a blog (Admin)
+ - DELETE /:id -> delete a product (Admin)
+ - PUT /:id -> update a product (admin)
+
+
+- api/ ordrs (CRUD)
+
+- POST / -> create the order (user/Admin)
+- GET / -> get the order (user/Admin)
+- GET /all- order -> get all the orders (admin)
+- DELETE /:id -> delete an order (Admin)
+- PUT /:id -> update and order (admin)
+
+- api/payment
+ - GET / token -> get the payent token (user/admin)
+ - POST /process - payment -< process the payment (user/ admin)
+
+
+- package that we will need 
+ npm i express cors http-errors multer body-parser bcrypt jsonwebtoken nodemailer cookie-parser
+ npm in --save-dev morgan nodemon
+
+
+
+ Ecommerce Project
+            1. front-end (React)
+            2. Back-end   (MOngoDB, Express.js, Node.js)
